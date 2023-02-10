@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppTesteCep.Model
 {
-    internal class Bairro
+    public class Bairro
     {
     }
 }
