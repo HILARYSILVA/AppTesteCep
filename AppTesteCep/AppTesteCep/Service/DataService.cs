@@ -15,7 +15,7 @@ namespace AppTesteCep.Service
         {
             Endereco end;
 
-            using (HttpClient client = new HttpClient()) 
+            using (HttpClient client = new HttpClient())
             {
                 HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/endereco/by-cep?cep=");
 
@@ -30,11 +30,30 @@ namespace AppTesteCep.Service
             }
             return end;
         }
-   
-    
-    
-    
-    
-    
+
+
+
+
+
+
+        public static async Task<List<Bairro>> GetBairrosByIdCidade(int id_Cidade)
+        {
+            List<Bairro> arr_bairro = new List<Bairro>();
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string json = response.Content?.ReadAsStringAsync().Result;
+
+                    arr_bairro = JsonConvert.DeserializeObject<List<Bairro>>(json);
+                }
+                else
+                    throw new Exception(response.RequestMessage.Content.ToString());
+            }
+            return arr_bairro;
+           }
     }
 }
