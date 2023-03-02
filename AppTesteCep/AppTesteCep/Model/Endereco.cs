@@ -6,11 +6,11 @@ namespace AppTesteCep.Model
 {
     public  class Endereco
     {
-      public int id_logradouro { get; set; }
+        public int id_logradouro { get; set; }
 
-      public int id_cidade { get; set; }
+        public int id_cidade { get; set; }
 
-      public string tipo { get; set; }
+        public string tipo { get; set; }
 
       public string descricao { get; set; }
 

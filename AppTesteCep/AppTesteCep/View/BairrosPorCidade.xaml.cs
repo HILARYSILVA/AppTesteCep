@@ -21,5 +21,10 @@ namespace AppTesteCep.View
         {
 
         }
+
+        private void pck_cidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
