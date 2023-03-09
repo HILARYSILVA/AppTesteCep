@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppTesteCep.Model
 {
-    internal class Cidade
+    public class Cidade
     {
         public int id_cidade { get; set; }
 

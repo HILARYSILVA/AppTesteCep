@@ -4,14 +4,14 @@ using System.Text;
 
 namespace AppTesteCep.Model
 {
-      public class Logradouro
+    public class Cep
     {
-        public int Id_Logradouro{ get; set; }
+        public int cep { get; set; }
+        public int Id_Logradouro { get; set; }
         public string tipo { get; set; }
 
         public string descricao { get; set; }
 
-        public int Cep { get; set; }
 
         public string descricao_Cidade { get; set; }
 
@@ -26,6 +26,5 @@ namespace AppTesteCep.Model
         public string complemento { get; set; }
 
         public int id_Cidade { get; set; }
-
     }
 }
