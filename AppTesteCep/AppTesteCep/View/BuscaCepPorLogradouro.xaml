@@ -8,24 +8,21 @@
 
 
             <StackLayout Orientation="Horizontal">
-                <SearchBar x:Name=" txt_logradouro"
+                <SearchBar x:Name="txt_logradouro"
                            Placeholder="Qual é a rua"/>
-                <Button Text="Buscar"/>
+                <Button Text="Buscar" Clicked="Button_Clicked"/>
             </StackLayout>
+
+            <ActivityIndicator x:Name="carregando" IsRunning="False"/>
 
             <ListView x:Name="list_ceps">
                 <ListView.Header>
                     <Grid ColumnDefinitions="Auto, *, *, Auto"
-                          RowDefinitions="=Auto">
-                        <Label Grid.Row="0" Grid.Column="0"
-                               Text="CEP" />
-                        <Label Grid.Row="0" Grid.Column="1"
-                               Text="Logradouro" />
-                        <Label Grid.Row="0" Grid.Column="2"
-                               Text="Cidade" />
-                        <Label Grid.Row="0" Grid.Column="3"
-                               Text="UF" />
-
+                          RowDefinitions="Auto">
+                        <Label Grid.Row="0" Grid.Column="0" Text="CEP" />
+                        <Label Grid.Row="0" Grid.Column="1" Text="Logradouro" />
+                        <Label Grid.Row="0" Grid.Column="2" Text="Cidade" />
+                        <Label Grid.Row="0" Grid.Column="3" Text="UF" />
                      </Grid>
                 </ListView.Header>
                 
@@ -36,11 +33,11 @@
                               RowDefinitions="Auto">
                                 <Label Grid.Row="0" Grid.Column="0"
                                    Text="{Binding CEP}"/>
-                                <Label Grid.Row="0" Grid.Column="0"
-                                   Text="{Binding descricao_logradouro}"/>
-                                <Label Grid.Row="0" Grid.Column="0"
+                                <Label Grid.Row="0" Grid.Column="1"
+                                   Text="{Binding descricao}"/>
+                                <Label Grid.Row="0" Grid.Column="2"
                                    Text="{Binding descricao_cidade}"/>
-                                <Label Grid.Row="0" Grid.Column="0"
+                                <Label Grid.Row="0" Grid.Column="3"
                                    Text="{Binding UF}"/>
 
                             </Grid>

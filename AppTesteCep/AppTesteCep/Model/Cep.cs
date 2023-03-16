@@ -6,8 +6,8 @@ namespace AppTesteCep.Model
 {
     public class Cep
     {
-        public int cep { get; set; }
-        public int Id_Logradouro { get; set; }
+        public string cep { get; set; }
+        public string Id_Logradouro { get; set; }
         public string tipo { get; set; }
 
         public string descricao { get; set; }
@@ -19,12 +19,12 @@ namespace AppTesteCep.Model
 
         public string descricao_Bairro { get; set; }
 
-        public int codigo_Cidade_ibge { get; set; }
+        public string codigo_Cidade_ibge { get; set; }
 
-        public int descricao_sem_numero { get; set; }
+        public string descricao_sem_numero { get; set; }
 
         public string complemento { get; set; }
 
-        public int id_Cidade { get; set; }
+        public string id_Cidade { get; set; }
     }
 }

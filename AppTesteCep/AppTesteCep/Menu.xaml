@@ -11,16 +11,16 @@
                    
                    Text="Api Busca Cep"/>
             <Button Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked"
-                    Text="Buscar Cep" /> 
-            
+                    Text="Busca Cep Logradouro" />
+
             <Button Grid.Row="1" Grid.Column="1"
-                    Text="Buscar Cidades"/>
+                    Text="Bairros Cidade" Clicked="Button_Clicked_1"/>
 
             <Button Grid.Row="2" Grid.Column="0"
-                    Text="Buscar Ruas de Bairro"/>
+                    Text="Busca  Endereco Cep" Clicked="Button_Clicked_2"/>
 
             <Button Grid.Row="2" Grid.Column="1"
-                    Text=""/>
+                    Text="Busca Cidades Estado" Clicked="Button_Clicked_3"/>
 
         </Grid>
     </ContentPage.Content>
