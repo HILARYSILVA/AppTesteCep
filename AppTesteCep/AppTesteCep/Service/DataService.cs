@@ -36,13 +36,13 @@ namespace AppTesteCep.Service
 
 
 
-        public static async Task<List<Bairro>> GetBairrosByIdCidade(int id_Cidade)
+        public static async Task<List<Bairro>> GetBairrosByIdCidade(string id_cidade)
         {
             List<Bairro> arr_bairro = new List<Bairro>();
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=");
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/bairro/by-cidade?id_cidade=" + id_cidade);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -61,7 +61,7 @@ namespace AppTesteCep.Service
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=");
+                HttpResponseMessage response = await client.GetAsync("https://cep.metoda.com.br/cidade/by-uf?uf=" + uf);
 
                 if (response.IsSuccessStatusCode)
                 {
